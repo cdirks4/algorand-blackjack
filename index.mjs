@@ -21,12 +21,7 @@ const accB = await stdlib.newTestAccount(startingBalance);
 const ctcB = accB.contract(backend);
 const ctcD = accD.contract(backend, ctcB.getInfo());
 console.log(`Having creator create testing `);
-const Player = (who) => ({
-	...stdlib.hasRandom,
-	startGame: () => {
-		return 1;
-	},
-});
+const Player = (who) => ({});
 
 await Promise.all([
 	ctcD.p.Dealer({
